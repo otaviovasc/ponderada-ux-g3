@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Voice Chat</h1>
+            <p>Converse naturalmente usando sua voz</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <span class="bot-avatar">AI</span>
+                            <p>Olá. Clique em "Falar" e diga sua mensagem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-controls">
+                    <button id="talkButton" class="talk-button" aria-label="Falar">
+                        <span class="button-label">Falar</span>
+                        <span class="status-dot" aria-hidden="true"></span>
+                    </button>
+                    <div class="status" id="statusIndicator">
+                        <span class="status-text">Pronto</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
